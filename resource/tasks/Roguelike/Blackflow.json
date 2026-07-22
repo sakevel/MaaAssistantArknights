@@ -81,6 +81,45 @@
         "template": "Blackflow@Roguelike@StartExplore.png",
         "roi": [958, 530, 322, 189]
     },
+    "Blackflow@Roguelike@ClickToStartPoint": {
+        "next": [
+            "Blackflow@Roguelike@OperatorImproveContinue",
+            "Blackflow@Roguelike@MissionFailedFlag2",
+            "Blackflow@Roguelike@StartExplore",
+            "Blackflow@Roguelike@Stages#next",
+            "Blackflow@Roguelike@GamePass",
+            "Blackflow@Roguelike@TodoEnter",
+            "Blackflow@Roguelike@Continue",
+            "Blackflow@Roguelike@ReturnButtons#next",
+            "Blackflow@Roguelike@ReturnConfirm",
+            "Blackflow@Roguelike@StartUpThemes#next",
+            "Blackflow@Roguelike@ClickToStartPoint"
+        ]
+    },
+    "Blackflow@Roguelike@ClickToStartPointAfterFailed": {
+        "next": [
+            "Blackflow@Roguelike@OperatorImproveContinue",
+            "Blackflow@Roguelike@StartExplore",
+            "Blackflow@Roguelike@StartExploreCD",
+            "Blackflow@Roguelike@StartUpThemes#next",
+            "Blackflow@Roguelike@ClickToStartPointAfterFailed"
+        ]
+    },
+    "Blackflow@Roguelike@OperatorImproveContinue": {
+        "doc": "识别偶发的特勤干员升级结算页并点击右下角继续",
+        "algorithm": "OcrDetect",
+        "action": "ClickRect",
+        "text": ["特勤干员升级", "持勤干员升级"],
+        "roi": [0, 385, 1280, 110],
+        "specificRect": [1150, 650, 1, 1],
+        "postDelay": 1000,
+        "next": [
+            "Blackflow@Roguelike@StartExplore",
+            "Blackflow@Roguelike@StartExploreCD",
+            "Blackflow@Roguelike@StartUpThemes#next",
+            "Blackflow@Roguelike@ClickToStartPoint"
+        ]
+    },
     "Blackflow@Roguelike@Continue": {
         "template": "Blackflow@Roguelike@Continue.png",
         "roi": [1050, 550, 210, 100],
